@@ -1,8 +1,6 @@
 // models/Post.js
-
 // Importing the Mongoose library
 const mongoose = require("mongoose");
-
 // Defining the schema for the 'Post' collection
 const PostSchema = mongoose.Schema({
   // 'name' field with type String, and it's required
@@ -11,13 +9,13 @@ const PostSchema = mongoose.Schema({
     required: true,
   },
   // 'class' field with type String, and it's required
-  class: {
-    type: String,
+  age: {
+    type: Number,
     required: true,
   },
   // 'age' field with type Number, and it's required
-  age: {
-    type: Number,
+  email: {
+    type: String,
     required: true,
   },
 });

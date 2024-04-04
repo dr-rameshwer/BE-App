@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 const DBCONNECT =
-  "mongodb+srv://<username>:<password>@<your-cluster-url>/<database>";
+  "mongodb+srv://admin:mern_123@collegecluster.yd9dyhi.mongodb.net/collegedb";
 
 app.use(bodyParser.json());
 
@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // Importing routes for posts
-const postsRoute = require("./routes/posts");
+const postsRoute = require("./routes/post");
 
 // Mounting the posts route handler at the '/api/posts' path
 app.use("/api/posts", postsRoute);
