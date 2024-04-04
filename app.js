@@ -5,8 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 3000;
 
-const DBCONNECT =
-  "mongodb+srv://admin:mern_123@collegecluster.yd9dyhi.mongodb.net/collegedb";
+const DBCONNECT = "UR DB Connection String Here";
 
 app.use(bodyParser.json());
 
