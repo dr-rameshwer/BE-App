@@ -1,7 +1,7 @@
 // routes/posts.js
 const express = require("express");
 const router = express.Router();
-const Post = require("../models/Post"); // Corrected import path
+const Post = require("./Post"); // Corrected import path
 
 // GET all posts
 router.get("/", async (req, res) => {

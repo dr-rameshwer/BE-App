@@ -1,11 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const postsRoute = require("./routes/posts");
 
 const app = express();
 const PORT = 3000;
-
-const DBCONNECT = "UR DB Connection String Here";
+const DBCONNECT =
+  "mongodb+srv://admin:Ramji_123@collegecluster.yd9dyhi.mongodb.net/";
 
 app.use(bodyParser.json());
 
@@ -14,13 +15,11 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("MongoDB connected"))
+  .then(() => {
+    console.log("MongoDB connected");
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  })
   .catch((err) => console.log(err));
-
-// Importing routes for posts
-const postsRoute = require("./routes/post");
 
 // Mounting the posts route handler at the '/api/posts' path
 app.use("/api/posts", postsRoute);
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
