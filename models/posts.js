@@ -20,6 +20,9 @@ const PostSchema = mongoose.Schema({
   },
 });
 
+// Export the Mongoose model for the "Post" collection
+module.exports = mongoose.model("Post", PostSchema);
+
 /*
 Mongoose Model Creation:
 mongoose.model("Post", PostSchema): 
@@ -34,5 +37,3 @@ So, in MongoDB, the collection will be named "posts".
 PostSchema is typically defined elsewhere in the codebase and contains the structure and validation rules 
 for documents in the "Post" collection.
 */
-// Export the Mongoose model for the "Post" collection
-module.exports = mongoose.model("Post", PostSchema);

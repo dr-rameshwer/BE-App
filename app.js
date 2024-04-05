@@ -33,4 +33,5 @@ mongoose
   .catch((err) => console.log(err)); // If there's an error in connecting to MongoDB, log the error
 
 // Mounting the posts route handler at the '/api/posts' path
+//It directs all incoming requests with paths starting with "/api/posts" to be handled by the postsRoute handler.
 app.use("/api/posts", postsRoute);
